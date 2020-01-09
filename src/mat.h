@@ -402,7 +402,7 @@ public:
     VkImage image() const;
     VkImageView imageview() const;
 
-#if __ANDROID_API__ >= 26
+#if __ANDROID_API__ >= 26 && NCNN_VULKAN
     // convenient construct from android hardware buffer
     static VkImageMat from_android_hardware_buffer(AHardwareBuffer* hb, VkAndroidHardwareBufferImageAllocator* allocator);
 #endif // __ANDROID_API__ >= 26
